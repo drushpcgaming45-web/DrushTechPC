@@ -164,11 +164,57 @@
             font-weight: bold;
         }
 
+        /* Redes Sociales */
+        .social-section {
+            padding: 60px 10%;
+            text-align: center;
+            background-color: var(--bg-dark);
+            border-top: 1px solid #222;
+        }
+
+        .social-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            color: white;
+            border: 1px solid #333;
+        }
+
+        .instagram-btn:hover {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            border-color: transparent;
+            box-shadow: 0 0 15px rgba(220, 39, 67, 0.5);
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #25D366;
+            color: black;
+            border-color: transparent;
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
+        }
+
         footer {
             padding: 20px;
             text-align: center;
             font-size: 0.9rem;
             color: var(--text-gray);
+            background: var(--bg-dark);
+            border-top: 1px solid #111;
         }
 
         @media (max-width: 768px) {
@@ -186,6 +232,7 @@
             <a href="#inicio">Inicio</a>
             <a href="#servicios">Servicios</a>
             <a href="#contacto">Contacto</a>
+            <a href="#redes">Redes</a>
         </div>
     </nav>
 
@@ -224,6 +271,14 @@
             <a href="mailto:Drush.pc.gaming45@gmail.com">Drush.pc.gaming45@gmail.com</a>
         </div>
         <a href="mailto:Drush.pc.gaming45@gmail.com" class="btn-cta">Enviar Email Ahora</a>
+    </section>
+
+    <section class="social-section" id="redes">
+        <h3>Sígueme y <span>Contáctame</span></h3>
+        <div class="social-links">
+            <a href="https://www.instagram.com/pcgaming.drush/?hl=es" target="_blank" class="social-btn instagram-btn">Instagram (@pcgaming.drush)</a>
+            <a href="https://wa.me" target="_blank" class="social-btn whatsapp-btn">WhatsApp (686 78 99 55)</a>
+        </div>
     </section>
 
     <footer>
