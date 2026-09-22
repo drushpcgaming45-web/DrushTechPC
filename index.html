@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrushTechPC | Montaje y Optimización de PC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00d4ff;
+            --bg-dark: #0a0a0a;
+            --bg-card: #1a1a1a;
+            --text-light: #ffffff;
+            --text-gray: #b3b3b3;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* Navegación */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: rgba(0,0,0,0.8);
+            position: fixed;
+            width: 80%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 400;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&q=80&w=1920') center/cover;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .btn-cta {
+            background-color: var(--primary-color);
+            color: black;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-cta:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px var(--primary-color);
+        }
+
+        /* Servicios */
+        .services {
+            padding: 100px 10%;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+
+        .services h2 span {
+            color: var(--primary-color);
+        }
+
+        .grid-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.3s;
+            border: 1px solid #333;
+        }
+
+        .card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* Contacto */
+        .contact {
+            padding: 100px 10%;
+            background: var(--bg-card);
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .email-box {
+            font-size: 1.5rem;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+        }
+
+        .email-box a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav { width: 100%; justify-content: center; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">DrushTechPC</div>
+        <div class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="inicio">
+        <h1>Drush<span>TechPC</span></h1>
+        <p>Expertos en montaje, personalización y optimización de hardware. Creamos la máquina perfecta para tus necesidades.</p>
+        <a href="#contacto" class="btn-cta">Solicitar Presupuesto</a>
+    </section>
+
+    <section class="services" id="servicios">
+        <h2>Nuestros <span>Servicios</span></h2>
+        <div class="grid-services">
+            <div class="card">
+                <h3>Asesoría Técnica</h3>
+                <p>Te ayudo a elegir los componentes compatibles y con la mejor relación calidad-precio según tu presupuesto.</p>
+            </div>
+            <div class="card">
+                <h3>Montaje Profesional</h3>
+                <p>Ensamblaje limpio, gestión de cables (cable management) y cuidado extremo de cada componente.</p>
+            </div>
+            <div class="card">
+                <h3>Optimización</h3>
+                <p>Instalación de drivers, actualización de BIOS, perfiles XMP/DOCP y optimización de Windows para máximo rendimiento.</p>
+            </div>
+            <div class="card">
+                <h3>Mantenimiento</h3>
+                <p>Limpieza profunda, cambio de pasta térmica y diagnóstico de componentes para alargar la vida de tu PC.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contacto">
+        <h2>¿Listo para tu nuevo <span>Setup</span>?</h2>
+        <p>Envíame un correo con tu presupuesto y el uso que le darás al PC (Gaming, Trabajo, Streaming).</p>
+        <div class="email-box">
+            <a href="mailto:Drush.pc.gaming45@gmail.com">Drush.pc.gaming45@gmail.com</a>
+        </div>
+        <a href="mailto:Drush.pc.gaming45@gmail.com" class="btn-cta">Enviar Email Ahora</a>
+    </section>
+
+    <footer>
+        &copy; 2024 DrushTechPC - Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>
