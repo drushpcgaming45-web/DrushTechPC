@@ -12,6 +12,7 @@
             --bg-card: #1a1a1a;
             --text-light: #ffffff;
             --text-gray: #b3b3b3;
+            --tiktok-color: #ff0050;
         }
 
         body {
@@ -56,7 +57,7 @@
             color: var(--primary-color);
         }
 
-        /* Hero Section */
+        /* Hero Section - ¡Aquí puedes enlazar la foto de tu PC! */
         .hero {
             height: 100vh;
             display: flex;
@@ -64,7 +65,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&q=80&w=1920') center/cover;
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&q=80&w=1920') center/cover;
             padding: 0 20px;
         }
 
@@ -152,18 +153,6 @@
             margin-bottom: 20px;
         }
 
-        .email-box {
-            font-size: 1.5rem;
-            color: var(--text-gray);
-            margin-bottom: 40px;
-        }
-
-        .email-box a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
         /* Redes Sociales */
         .social-section {
             padding: 60px 10%;
@@ -180,19 +169,21 @@
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 20px;
             flex-wrap: wrap;
         }
 
         .social-btn {
             display: inline-block;
-            padding: 12px 25px;
-            border-radius: 8px;
+            padding: 12px 30px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
             transition: 0.3s;
             color: white;
             border: 1px solid #333;
+            text-transform: uppercase;
+            font-size: 0.9rem;
         }
 
         .instagram-btn:hover {
@@ -208,6 +199,13 @@
             box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
         }
 
+        .tiktok-btn:hover {
+            background-color: white;
+            color: black;
+            border-color: var(--tiktok-color);
+            box-shadow: 0 0 15px rgba(255, 0, 80, 0.6);
+        }
+
         footer {
             padding: 20px;
             text-align: center;
@@ -219,7 +217,7 @@
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
-            nav { width: 100%; justify-content: center; }
+            nav { width: 100%; justify-content: center; padding: 20px 0; }
             .nav-links { display: none; }
         }
     </style>
@@ -239,7 +237,8 @@
     <section class="hero" id="inicio">
         <h1>Drush<span>PC</span></h1>
         <p>Expertos en montaje, personalización y optimización de hardware. Creamos la máquina perfecta para tus necesidades.</p>
-        <a href="#contacto" class="btn-cta">Solicitar Presupuesto</a>
+        <!-- Enlace directo a WhatsApp para agilizar presupuestos -->
+        <a href="https://wa.me." class="btn-cta" target="_blank">Pedir Presupuesto</a>
     </section>
 
     <section class="services" id="servicios">
@@ -266,23 +265,21 @@
 
     <section class="contact" id="contacto">
         <h2>¿Listo para tu nuevo <span>Setup</span>?</h2>
-        <p>Envíame un correo con tu presupuesto y el uso que le darás al PC (Gaming, Trabajo, Streaming).</p>
-        <div class="email-box">
-            <a href="mailto:Drush.pc.gaming45@gmail.com">Drush.pc.gaming45@gmail.com</a>
-        </div>
-        <a href="mailto:Drush.pc.gaming45@gmail.com" class="btn-cta">Enviar Email Ahora</a>
+        <p>Hablemos directamente por WhatsApp de forma rápida o revisa mis trabajos en redes sociales. ¡Diseñemos tu máquina perfecta!</p>
+        <a href="https://wa.me." class="btn-cta" target="_blank">Escríbeme por WhatsApp</a>
     </section>
 
     <section class="social-section" id="redes">
         <h3>Sígueme y <span>Contáctame</span></h3>
         <div class="social-links">
-            <a href="https://www.instagram.com/pcgaming.drush/?hl=es" target="_blank" class="social-btn instagram-btn">Instagram (@pcgaming.drush)</a>
-            <a href="https://wa.me" target="_blank" class="social-btn whatsapp-btn">WhatsApp (686 78 99 55)</a>
+            <a href="https://instagram.com" class="social-btn instagram-btn" target="_blank">Instagram</a>
+            <a href="https://tiktok.com" class="social-btn tiktok-btn" target="_blank">TikTok</a>
+            <a href="https://wa.me" class="social-btn whatsapp-btn" target="_blank">WhatsApp</a>
         </div>
     </section>
 
     <footer>
-        &copy; 2026 DrushPC - Todos los derechos reservados.
+        <p>© 2026 DrushPC - Todos los derechos reservados.</p>
     </footer>
 
 </body>
