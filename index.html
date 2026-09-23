@@ -263,13 +263,33 @@
         </div>
     </section>
     
-       <section class="contact" id="contacto">
+        <section class="contact" id="contacto">
         <h2>¿Listo para tu nuevo <span>Setup</span>?</h2>
-        <p>Envíame un correo con tu presupuesto y el uso que le darás al PC (Gaming, Trabajo, Streaming). ¡Diseñemos tu máquina perfecta!</p>
-<!-- Botón configurado para abrir el correo del cliente directamente -->
-<a href="mailto:drush.pc.gaming45@://gmail.com" class="btn-cta">Enviar Correo Ahora</a>
-           
+        <p>Envíame un correo con tu presupuesto y el uso que le darás al PC (Gaming, Trabajo, Streaming).</p>
+        
+        <!-- Tu correo bien visible en grande -->
+        <div class="email-box" style="font-size: 1.8rem; margin: 20px 0; font-weight: bold; color: var(--primary-color);">
+            drush.pc.gaming45@gmail.com
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
+            <!-- Botón 1: Copiar el correo al portapapeles de forma automática -->
+            <button onclick="copiarCorreo()" class="btn-cta" style="border: none; cursor: pointer; background-color: #ffffff; color: #000000;">
+                📋 Copiar Correo
+            </button>
+
+            <!-- Botón 2: Enlace clásico corregido por si acaso -->
+            <a href="mailto:drush.pc.gaming45@gmail.com" class="btn-cta">Abrir Correo Directo</a>
+        </div>
     </section>
+
+    <!-- Script mágico para que el botón de copiar funcione -->
+    <script>
+        function copiarCorreo() {
+            navigator.clipboard.writeText("drush.pc.gaming45@gmail.com");
+            alert("¡Correo copiado al portapapeles! Ya puedes pegarlo en tu aplicación de email.");
+        }
+    </script>
 
     <section class="social-section" id="redes">
         <h3>Sígueme y <span>Contáctame</span></h3>
