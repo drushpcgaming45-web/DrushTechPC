@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DrushPC | Montaje y Optimización de PC</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com" rel="stylesheet">
     <style>
         :root {
             --primary-color: #00d4ff;
@@ -29,7 +29,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 10%;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.85);
             position: fixed;
             width: 80%;
             top: 0;
@@ -57,7 +57,7 @@
             color: var(--primary-color);
         }
 
-        /* Hero Section - ¡Aquí puedes enlazar la foto de tu PC! */
+        /* Hero Section con tu foto de Ryzen 7 + RTX 5070 */
         .hero {
             height: 100vh;
             display: flex;
@@ -65,7 +65,8 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&q=80&w=1920') center/cover;
+            /* Usamos tu imagen de hardware de fondo con una opacidad equilibrada */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('ryzen7-setup.png') center/cover;
             padding: 0 20px;
         }
 
@@ -73,6 +74,7 @@
             font-size: 4rem;
             margin-bottom: 10px;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .hero h1 span {
@@ -80,26 +82,53 @@
         }
 
         .hero p {
-            font-size: 1.2rem;
-            color: var(--text-gray);
+            font-size: 1.3rem;
+            color: var(--text-light);
             max-width: 600px;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            font-weight: 300;
         }
 
         .btn-cta {
             background-color: var(--primary-color);
             color: black;
-            padding: 15px 30px;
+            padding: 15px 35px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 50px;
             transition: 0.3s;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .btn-cta:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 25px var(--primary-color);
+        }
+
+        /* Botón Flotante de WhatsApp */
+        .whatsapp-floating {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            text-decoration: none;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: 0.3s;
+        }
+
+        .whatsapp-floating:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 20px var(--primary-color);
+            background-color: #20ba5a;
         }
 
         /* Servicios */
@@ -111,6 +140,7 @@
         .services h2 {
             font-size: 2.5rem;
             margin-bottom: 50px;
+            text-transform: uppercase;
         }
 
         .services h2 span {
@@ -120,25 +150,33 @@
         .grid-services {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            gap: 25px;
         }
 
         .card {
             background: var(--bg-card);
-            padding: 30px;
+            padding: 35px 25px;
             border-radius: 20px;
             transition: 0.3s;
-            border: 1px solid #333;
+            border: 1px solid #252525;
         }
 
         .card:hover {
             border-color: var(--primary-color);
-            transform: translateY(-10px);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 212, 255, 0.05);
         }
 
         .card h3 {
             color: var(--primary-color);
             margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         /* Contacto */
@@ -146,24 +184,42 @@
             padding: 100px 10%;
             background: var(--bg-card);
             text-align: center;
+            border-top: 1px solid #222;
         }
 
         .contact h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .contact h2 span {
+            color: var(--primary-color);
+        }
+
+        .contact p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
         }
 
         /* Redes Sociales */
         .social-section {
-            padding: 60px 10%;
+            padding: 70px 10%;
             text-align: center;
             background-color: var(--bg-dark);
-            border-top: 1px solid #222;
+            border-top: 1px solid #151515;
         }
 
         .social-section h3 {
-            font-size: 1.8rem;
-            margin-bottom: 30px;
+            font-size: 2rem;
+            margin-bottom: 35px;
+            text-transform: uppercase;
+        }
+
+        .social-section h3 span {
+            color: var(--primary-color);
         }
 
         .social-links {
@@ -175,7 +231,7 @@
 
         .social-btn {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 14px 32px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
@@ -184,30 +240,31 @@
             border: 1px solid #333;
             text-transform: uppercase;
             font-size: 0.9rem;
+            letter-spacing: 1px;
         }
 
         .instagram-btn:hover {
             background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
             border-color: transparent;
-            box-shadow: 0 0 15px rgba(220, 39, 67, 0.5);
+            box-shadow: 0 0 20px rgba(220, 39, 67, 0.4);
         }
 
         .whatsapp-btn:hover {
             background-color: #25D366;
             color: black;
             border-color: transparent;
-            box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
         }
 
         .tiktok-btn:hover {
             background-color: white;
             color: black;
             border-color: var(--tiktok-color);
-            box-shadow: 0 0 15px rgba(255, 0, 80, 0.6);
+            box-shadow: 0 0 20px rgba(255, 0, 80, 0.5);
         }
 
         footer {
-            padding: 20px;
+            padding: 25px;
             text-align: center;
             font-size: 0.9rem;
             color: var(--text-gray);
@@ -216,13 +273,17 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
+            .hero h1 { font-size: 2.8rem; }
+            .hero p { font-size: 1.1rem; }
             nav { width: 100%; justify-content: center; padding: 20px 0; }
             .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me." class="whatsapp-floating" target="_blank" title="Escríbenos por WhatsApp">💬</a>
 
     <nav>
         <div class="logo">DrushPC</div>
@@ -237,8 +298,7 @@
     <section class="hero" id="inicio">
         <h1>Drush<span>PC</span></h1>
         <p>Expertos en montaje, personalización y optimización de hardware. Creamos la máquina perfecta para tus necesidades.</p>
-        <!-- Enlace directo a WhatsApp para agilizar presupuestos -->
-        <a href="https://wa.me." class="btn-cta" target="_blank">Pedir Presupuesto</a>
+        <a href="https://wa.me." class="btn-cta" target="_blank">Solicitar Presupuesto</a>
     </section>
 
     <section class="services" id="servicios">
@@ -265,22 +325,4 @@
 
     <section class="contact" id="contacto">
         <h2>¿Listo para tu nuevo <span>Setup</span>?</h2>
-        <p>Hablemos directamente por WhatsApp de forma rápida o revisa mis trabajos en redes sociales. ¡Diseñemos tu máquina perfecta!</p>
-        <a href="https://wa.me." class="btn-cta" target="_blank">Escríbeme por WhatsApp</a>
-    </section>
-
-    <section class="social-section" id="redes">
-        <h3>Sígueme y <span>Contáctame</span></h3>
-        <div class="social-links">
-            <a href="https://instagram.com" class="social-btn instagram-btn" target="_blank">Instagram</a>
-            <a href="https://tiktok.com" class="social-btn tiktok-btn" target="_blank">TikTok</a>
-            <a href="https://wa.me" class="social-btn whatsapp-btn" target="_blank">WhatsApp</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2026 DrushPC - Todos los derechos reservados.</p>
-    </footer>
-
-</body>
-</html>
+        <p>Hablemos directamente por WhatsApp para diseñar un presupuesto a tu medida sin compromisos. ¡Te responderé de inmediato!</p>
